@@ -1,0 +1,12 @@
+<apex:page >
+<h1>To Do List.</h1><br/><br/>
+<h2>Add progress Tab</h2><br/>
+<h2>Add Topic Sections</h2><br/>
+<h2>Gather resources - topical information etc</h2><br/>
+<h2>Learning Roadmap</h2><br/>
+<h2>Figure out how to add practical examples mid page - coding boxes etc</h2><br/>
+<h2>Topical Quizes</h2><br/>
+
+<apex:image url="{!$Resource.HomepageDraftLayout}" width="1000" height="500"/>
+
+</apex:page>

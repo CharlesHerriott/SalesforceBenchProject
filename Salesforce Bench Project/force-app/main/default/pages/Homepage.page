@@ -1,0 +1,78 @@
+<apex:page standardStylesheets="false" standardController="Account" extensions="HomepageExtension">
+  <style>
+    .TextAreas {
+      Border: 1px solid black;
+      display = none;
+    }
+
+    .h1 {
+
+      font-size: 200%;
+    }
+  </style>
+
+  <script>
+    function show(obj) {
+      if (document.getElementById(obj).style.display == 'none') {
+        document.getElementById(obj).style.display = 'block';
+      }
+      else
+        document.getElementById(obj).style.display = 'none';
+    }
+  </script>
+
+    <div class="container" id="navbar-container">
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item latinModern">
+              <a class="nav-link" href="Homepage">Home</a>
+            </li>
+            <li class="nav-item latinModern">
+              <a class="nav-link" href="Bloke">Bloke</a>
+            </li>
+            
+            <li class="nav-item latinModern">
+              <a class="nav-link" href="Test">Test</a>
+            </li>
+            
+          </ul>
+          
+        </div>
+      </nav>
+    </div>
+
+
+
+  <h1>Welcome to Salesforce Training for Real Men.</h1>
+  <apex:form>
+
+    <apex:outputText styleClass="TextAreas" value="Introduction to Salesforce Fundamentals" />
+
+  </apex:form>
+
+  <apex:form>
+  <div>
+    <a styleClass="TextAreas" href="javascript:;" onclick="show(this.nextSibling.nextSibling.id);">Salesforce Fundamentals Section One</a>
+    <div id="expand">
+      Salesforce Funadmentals Section One will cover the basics of user security, accessability and other fundamental topics. This sections consists of important sectioned information, practical applications and a short quiz at the end.
+          <apex:commandButton value="Go to Section" action="{!redirectUser}"/>
+      
+    </div>
+  </div>
+  <br/>
+  <div>
+    <a href="javascript:;" onclick="show(this.nextSibling.nextSibling.id);">Salesforce Fundamentals Section Two</a>
+    <div id="expand1">
+      Some information about topic two
+    </div>
+  </div>
+  </apex:form>
+
+</apex:page>
